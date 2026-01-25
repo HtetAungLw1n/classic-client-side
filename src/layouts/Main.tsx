@@ -7,11 +7,11 @@ const Main = () => {
       <div className="min-h-screen w-full relative">
         {/* Dashed Top Fade Grid */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 -z-10"
           style={{
             backgroundImage: `
-        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
-        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+        linear-gradient(to right, #0000001A 1px, transparent 1px),
+        linear-gradient(to bottom, #0000001A 1px, transparent 1px)
       `,
             backgroundSize: "20px 20px",
             backgroundPosition: "0 0, 0 0",
@@ -30,7 +30,7 @@ const Main = () => {
               transparent 3px,
               transparent 8px
             ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+            radial-gradient(ellipse 70% 70% at 50% 0%, #000 60%, transparent 100%)
       `,
             WebkitMaskImage: `
  repeating-linear-gradient(
@@ -53,8 +53,10 @@ const Main = () => {
             WebkitMaskComposite: "source-in",
           }}
         />
-        <Navbar />
-        <Outlet />
+        <div className="container mx-auto px-4">
+          <Navbar />
+          <Outlet />
+        </div>
       </div>
     </>
   );
