@@ -1,9 +1,24 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./layouts/Main";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+]);
+
 export function App() {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="font-medium">Hello World</div>
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
