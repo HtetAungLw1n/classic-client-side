@@ -1,14 +1,53 @@
 import WallpaperComponent from "./WallpaperComponent";
+import wallpaper1 from "@/assets/dummy.jpg";
+import wallpaper2 from "@/assets/dummy2.jpg";
+import wallpaper3 from "@/assets/dummy3.jpg";
+import Masonry from "react-masonry-css";
 
 const WallpaperLayout = () => {
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1,
+  };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-      <WallpaperComponent />
-      <WallpaperComponent />
-      <WallpaperComponent />
-      <WallpaperComponent />
-      <WallpaperComponent />
-    </div>
+    <Masonry
+      breakpointCols={breakpointColumnsObj}
+      className="my-masonry-grid"
+      columnClassName="my-masonry-grid_column"
+    >
+      <div>
+        <WallpaperComponent img={wallpaper1} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper2} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper3} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper2} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper3} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper1} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper3} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper2} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper1} />
+      </div>
+      <div>
+        <WallpaperComponent img={wallpaper3} />
+      </div>
+    </Masonry>
   );
 };
 

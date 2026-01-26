@@ -8,18 +8,18 @@ const Home = () => {
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-4">
         <div className="space-y-4 text-center">
           <div className="text-4xl md:text-5xl lg:text-6xl font-times font-medium">
-            Worlds Within Walls
+            Never look the same twice
           </div>
           <div className="text-gray-500 max-w-prose mx-auto">
-            Every wallpaper holds meaning. Some catch your eye, some catch your
-            mind.
+            We both know you've had that same photo for two years. Level up with
+            our daily-refreshed vault of premium avatars
           </div>
         </div>
 
         <div className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
           <Input
             placeholder="Search...."
-            className="mt-8 sm:mt-10 w-full p-5 md:p-6 rounded-full text-black border border-gray-300 bg-[linear-gradient(178deg,rgba(255,255,255,0.2)_0%,rgba(219,219,219,0.3)_60%,rgba(200,200,200,0.1)_100%)] shadow-[inset_0.5px_0.5px_1px_1.5px_rgba(255,255,255,0.75)] active:scale-[101%] transition-all duration-200 ease-in-out"
+            className="mt-8 sm:mt-10 w-full p-5 md:p-6 rounded-full text-black border border-gray-300 bg-[linear-gradient(178deg,rgba(255,255,255,0.2)_0%,rgba(219,219,219,0.3)_60%,rgba(200,200,200,0.1)_100%)] shadow-[inset_0.5px_0.5px_1px_1.5px_rgba(255,255,255,0.75)] active:scale-[98%] transition-all duration-200 ease-in-out"
           />
         </div>
 

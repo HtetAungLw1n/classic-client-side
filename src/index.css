@@ -131,3 +131,21 @@
 @theme {
   --font-times: "Times New Roman", Times, serif;
 }
+
+/* The main container */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+/* The columns */
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.masonry-item {
+  margin-bottom: 30px;
+}
