@@ -1,30 +1,40 @@
-import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Link } from 'react-router-dom';
+import { useState, useRef } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
 
 const RATIOS = [
-  "aspect-[9/16]",
-  "aspect-[3/4]",
-  "aspect-[2/3]",
-  "aspect-[10/16]",
-  "aspect-[4/5]",
+  'aspect-[9/16]',
+  'aspect-[3/4]',
+  'aspect-[2/3]',
+  'aspect-[10/16]',
+  'aspect-[4/5]',
 ];
 
 const getRandomRatio = () => RATIOS[Math.floor(Math.random() * RATIOS.length)];
 
-const WallpaperComponent = ({ img }: { img: string }) => {
+const WallpaperComponent = ({
+  img,
+  className,
+}: {
+  img: string;
+  className?: string;
+}) => {
   const [loaded, setLoaded] = useState(false);
   const ratioRef = useRef(getRandomRatio());
 
   return (
     <Link
       to="dummy"
-      className="group block mb-4 p-1 rounded-xl border border-gray-300 relative"
+      className={cn(
+        'group relative mb-4 block rounded-xl border border-gray-300 p-1',
+        className,
+      )}
     >
       {/* Skeleton with fake but stable ratio */}
       {!loaded && (
         <div className={ratioRef.current}>
-          <Skeleton className="w-full h-full rounded-lg" />
+          <Skeleton className="h-full w-full rounded-lg" />
         </div>
       )}
 
@@ -33,15 +43,11 @@ const WallpaperComponent = ({ img }: { img: string }) => {
         loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
-        className={`
-          w-full block rounded-lg
-          transition-all duration-500 ease-out
-          ${loaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-sm scale-[1.02]"}
-        `}
+        className={`block w-full rounded-lg transition-all duration-300 ease-out ${loaded ? 'blur-0 scale-100 opacity-100' : 'scale-[1.02] opacity-0 blur-sm'} `}
         alt="wallpaper"
       />
 
-      <div className="opacity-0 group-hover:opacity-100 absolute bottom-3 right-3 px-3 py-1 text-xs rounded-full bg-black/30 text-white backdrop-blur-sm transition">
+      <div className="absolute right-3 bottom-3 rounded-full bg-black/30 px-3 py-1 text-xs text-white opacity-0 backdrop-blur-sm transition group-hover:opacity-100">
         dummy text
       </div>
     </Link>

@@ -1,8 +1,8 @@
-import WallpaperComponent from "./WallpaperComponent";
-import wallpaper1 from "@/assets/dummy.jpg";
-import wallpaper2 from "@/assets/dummy2.jpg";
-import wallpaper3 from "@/assets/dummy3.jpg";
-import Masonry from "react-masonry-css";
+import WallpaperComponent from './WallpaperComponent';
+import wallpaper1 from '@/assets/dummy.jpg';
+import wallpaper2 from '@/assets/dummy2.jpg';
+import wallpaper3 from '@/assets/dummy3.jpg';
+import Masonry from 'react-masonry-css';
 // import WallpaperComponentSkeleton from "./WallpaperComponentSkeleton";
 
 const WallpaperLayout = () => {
