@@ -3,6 +3,7 @@ import wallpaper1 from "@/assets/dummy.jpg";
 import wallpaper2 from "@/assets/dummy2.jpg";
 import wallpaper3 from "@/assets/dummy3.jpg";
 import Masonry from "react-masonry-css";
+// import WallpaperComponentSkeleton from "./WallpaperComponentSkeleton";
 
 const WallpaperLayout = () => {
   const breakpointColumnsObj = {
@@ -47,6 +48,12 @@ const WallpaperLayout = () => {
       <div>
         <WallpaperComponent img={wallpaper3} />
       </div>
+
+      {/* {Array.from({ length: 8 }).map((_, index) => (
+        <div key={index}>
+          <WallpaperComponentSkeleton />
+        </div>
+      ))} */}
     </Masonry>
   );
 };

@@ -8,7 +8,7 @@ const Home = () => {
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-4">
         <div className="space-y-4 text-center">
           <div className="text-4xl md:text-5xl lg:text-6xl font-times font-medium">
-            Never look the same twice
+            Stay Freshy, Stay Classy
           </div>
           <div className="text-gray-500 max-w-prose mx-auto">
             We both know you've had that same photo for two years. Level up with
